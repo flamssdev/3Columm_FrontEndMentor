@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-whitep-aragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: var(--Very-light-gray-background-headings-buttons);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .card {
+  display: flex;
+  flex-direction: row;
+  width: 999px;
+  height: 600px;
+  max-height: 600px;
+  border-radius: 15px;
+}
+
+.container .card .sedans {
+  background: var(--Bright-orange);
+}
+
+.container .card .suvs {
+  background: var(--Dark-cyan);
+}
+
+.container .card .luxury {
+  background: var(--Very-dark-cyan);
+}
+
+.container .card section {
+  padding: 60px 60px 50px 50px;
+  position: relative;
+}
+
+.container .card section img {
+  width: 80px;
+}
+
+.container .card .title {
+  color: var(--Very-light-gray-background-headings-buttons);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 55px;
+  margin: 30px 0 0;
+  font-weight: 700;
+}
+
+.container .card .description {
+  color: var(--Transparent-whitep-aragraphs);
+  font-size: 19px;
+  line-height: 27px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.container .card section button {
+  border-radius: 30px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 60px;
+  cursor: pointer;
+  border: 2px solid var(--Very-light-gray-background-headings-buttons);
+  font-size: 16px;
+}
+
+button:hover {
+  border: 2px solid var(--Very-light-gray-background-headings-buttons);
+  background-color: transparent;
+  color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.container .card section .bt-sedans {
+  color: var(--Bright-orange);
+}
+.container .card section .bt-suvs {
+  color: var(--Dark-cyan);
+}
+
+.container .card section .bt-luxury {
+  color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 1040px) {
+  .container .card {
+    width: 666px;
+  }
+
+  .container .card section {
+    padding: 60px 20px;
+    position: relative;
+  }
+
+  .container .card .title {
+    font-size: 50px;
+  }
+
+  .container .card .description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 666px) {
+  .container .card {
+    display: grid;
+    grid-template-rows: repeat(3, 600px);
+    width: 375px;
+    margin: 0;
+  }
+}
